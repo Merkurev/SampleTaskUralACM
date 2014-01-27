@@ -1,0 +1,1 @@
+@..\!test.exe -v task-cor.exe
