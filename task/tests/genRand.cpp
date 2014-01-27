@@ -4,7 +4,9 @@
 
 const int MAX_VALUE = 1e9;
 const int MIN_VALUE = 1;
+const int number = 4;
 
+int values[number];
 
 int main (int argc, char* argv[] )
 {
@@ -19,9 +21,11 @@ int main (int argc, char* argv[] )
 		
 	while (true)
 	{
-		int a = rand(minValue, maxValue);
-		int b = rand(minValue, maxValue);
+		for (int i = 0; i < number; i++)
+			values[i] = rand(minValue, maxValue);
+		z_random_shuffle(values, values + number);
 		
+		int a = values[0], b = values[1];
 		if (a + b == 146)
 			continue;
 
